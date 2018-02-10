@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mobile Masts in Leeds</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2 class="jumbotron">Mobile phone masts - 02/09/2016</h2>
+  <p>The following table provides information on mobile phone masts located in leeds</p>
+  <table class="table">
+    <thead>
+      <tr>
+        {% comment %}
+          Make each table header a button to which transforms the table to show acending order for which was pressed
+        {% endcomment %}
+        <th>property_name</th>
+        <th>property_address_line_1</th>
+        <th>property_address_line_2</th>
+        <th>property_address_line_3</th>
+        <th>property_address_line_4</th>
+        <th>unit_name</th>
+        <th>tenant_name</th>
+        <th>lease_start_date</th>
+        <th>lease_end_date</th>
+        <th>lease_years</th>
+        <th>current_rent</th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for property in all_property %}
+      <tr>
+        {% comment %}
+          here holds each table header data, should represent model or csv data, and should be one from many entries
+        {% endcomment %}
+        <td>{{ property.property_name }}
+          {% comment %}
+          Property.property_name
+          {% endcomment %}
+        </td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+
+      </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+</div>
+
+</body>
+</html>

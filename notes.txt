@@ -1,0 +1,6 @@
+Have index as home page, and pull data from leeds.html
+intergrate python with basic html setup
+migrate and feed data
+
+
+Potentially have model data displayed for each tenant_name
