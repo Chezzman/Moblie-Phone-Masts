@@ -4,3 +4,5 @@ migrate and feed data
 
 
 Potentially have model data displayed for each tenant_name
+
+need to make javascript or other classes that will be added to the html on press for sorting tables
