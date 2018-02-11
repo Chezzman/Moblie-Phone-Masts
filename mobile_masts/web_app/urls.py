@@ -1,6 +1,8 @@
-from django.urls import re_path
+from django.urls import re_path, path
 from . import views
 
 urlpatterns = [
-    re_path(r'^$', views.index, name='index'),
+    path('home/', views.index, name='index'),
+
+    path('create/', views.create, name='create')
 ]

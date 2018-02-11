@@ -1,6 +1,16 @@
-Have index as home page, and pull data from leeds.html
-intergrate python with basic html setup
-migrate and feed data
+
+
+Have index as home page, and pull data from leeds.html - maybe
+Add a form to add to data base
+put form on index html at bottom of the table
+
+
+add css to what I like
+use es6 for user experence
+
+Test functions for form and producing the table data
+
+
 
 
 Potentially have model data displayed for each tenant_name
