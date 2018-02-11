@@ -13,6 +13,3 @@ class Property(models.Model):
     lease_end_date = models.DateField()
     lease_years = models.IntegerField()
     current_rent = models.DecimalField(max_digits=10, decimal_places=2)
-
-    def __str__(self):
-        return self.first_name + " " + self.last_name
