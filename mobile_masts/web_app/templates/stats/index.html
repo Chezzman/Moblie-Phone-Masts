@@ -1,89 +1,35 @@
 <!-- <html lang="en"> -->
+
 <head>
+  {% load static from staticfiles %}
   <title>Mobile Masts in Leeds</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.11.2/dist/bootstrap-table.min.js"></script>
+  <script type="text/javascript" src="{% static '\js\mobile_masts_table.js' %}"></script>
 </head>
 <body>
 
-<div class="container">
   <h2 class="jumbotron">Mobile phone masts - 02/09/2016</h2>
-  <p>The following table provides information on mobile phone masts located in leeds</p>
-  <table class="table">
-    <thead>
-      <tr>
-        {% comment %}
-          Make each table header a button to which transforms the table to show acending order for which was pressed
-        {% endcomment %}
-        <th>Property Name</th>
-        <th>Property Address Line 1</th>
-        <th>Property Address Line 2</th>
-        <th>Property Address Line 3</th>
-        <th>Property Address Line 4</th>
-        <th>Unit  Name</th>
-        <th>Tenant Name</th>
-        <th>Lease Start Date</th>
-        <th>Lease End Date</th>
-        <th>Lease Years</th>
-        <th>Current Rent</th>
 
-      </tr>
-    </thead>
-    {% if all_property %}
-    <tbody>
-      {% for property in all_property %}
-      <tr>
-        <td>
-          {{ property.property_name }}
-        </td>
-        <td>
-          {{ property.property_address_line_1 }}
-        </td>
-        <td>
-          {{ property.property_address_line_2 }}
-        </td>
-        <td>
-          {{ property.property_address_line_3 }}
-        </td>
-        <td>
-          {{ property.property_address_line_4 }}
-        </td>
-        <td>
-          {{ property.unit_name }}
-        </td>
-        <td>
-          {{ property.tenant_name }}
-        </td>
-        <td>
-          {{ property.lease_start_date }}
-        </td>
-        <td>
-          {{ property.lease_end_date }}
-        </td>
-        <td>
-          {{ property.lease_years }}
-        </td>
-        <td>
-          {{ property.current_rent }}
-        </td>
 
-      </tr>
-
-      </tr>
-      {% endfor %}
-    </tbody>
-    {% else %}
-    <h3>There are no saved properties in Leeds</h3>
-    {% endif %}
-
-  </table>
   <div>
     <a href="/web_app/create/">Add Another Mast</a>
   </div>
-</div>
+
+  </div>
+  <div class="container">
+    <table class="table">
+
+        {{ html|safe }}
+
+
+      </table>
+  </div>
+
 
 </body>
 <!-- </html> -->
