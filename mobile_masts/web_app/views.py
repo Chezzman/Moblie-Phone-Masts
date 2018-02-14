@@ -69,3 +69,9 @@ def total_rent(request):
     return render(request, template, {'total' : total})
 
 #DICTIONARY
+def dictionary(request):
+    df = pd.read_csv(data_csv)
+    df = pd.pivot_table(df,index=["Tenant Name"])
+    table = df.replace(np.nan, '', regex=True).to_html(classes=['table'])
+    template = 'stats/dictionary.html'
+    return render(request, template, {'table' : table})
