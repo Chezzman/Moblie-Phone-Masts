@@ -7,32 +7,17 @@ I have set up the static fiels for bootstrap and future javascript and css files
 need to:
 send csv data to page and not just be the page,
 then manipulate data for test paramiters
-   - list sorted by lease amount in ascending order
-          df = pd.read_csv("D:\MAIN\CODE\Mobile_Phone_Masts_Data\Moblie-Phone-Masts\mobile_masts\mobile_phone_masts.csv")#qs.to_dataframe()
-          df = df.sort_values(by='Current Rent')
 
-
-   - display the first 5 results in a table that can then be toggled between ascending/decending value
-        df = df.head(5)
 
 Add a form to add to data base that converts to csv with pandas(new entries must meet the lease amount requirements)
 put form on index html at bottom of the table
 
-display total rent for all items in this page List
-
 
 
 add css to what I like
-use es6 for user experence
+use es6 for user experience
 
 Test functions for form and producing the table data
-
-
-
-
-Potentially have model data displayed for each tenant_name
-
-need to make javascript or other classes that will be added to the html on press for sorting tables
 
 
 working theiory for dictionary

@@ -1,7 +1,7 @@
 from django import forms
 from .models import Property
 
-class property_form(forms.Form):
+class Property_Form(forms.Form):
         property_name = forms.CharField()
         property_address_line_1 = forms.CharField()
         property_address_line_2 = forms.CharField()

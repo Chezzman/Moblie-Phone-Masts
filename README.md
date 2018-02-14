@@ -27,7 +27,7 @@ Requirements:
 Self analysis
 
 File structure : Average
-Naming convention : Poor
+Naming convention : Abysmal 
 Use of Time Available : above average
 Code Proficiency : bellow average
 Experience Gained : High
