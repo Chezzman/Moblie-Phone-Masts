@@ -1,34 +1,5 @@
-
-
-<head>
-
-  {% load static %}
-
-  <title>Mobile Masts in Leeds</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
-  <script src="{% static "js/jquery-3.3.1.min.js" %}"></script>
-  <script src="{% static "js\bootstrap.min.js" %}"></script>
-  <!-- <script type="text/javascript" src="{% static "js\mobile_masts_table.js" %}"></script> -->
-</head>
-
+{% include "stats/partials/header.html"%}
 
   <div class="container">.
-      <h2 class="jumbotron">Mobile phone masts - 02/09/2016</h2>
-      <div>
-        <a href="{% url 'create' %}">Add Another Mast</a>
-      </div>
         {{ html|safe }}
   </div>
-
-  <br>
-
-  <div class="container">
-    <!-- BUTTON TO TOGGLE ASCENDING/DESCENDING VALUE -->
-    {% include "stats/table_five.html" %}
-  </div>
-  <div class="container">
-  {{ df|safe }}
-  </div>
-<a href="{% url 'total_rent' %}">Total rent</a>

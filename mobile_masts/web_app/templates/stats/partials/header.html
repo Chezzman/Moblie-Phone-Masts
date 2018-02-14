@@ -1,0 +1,38 @@
+<head>
+
+  {% load static %}
+
+  <title>Mobile Masts in Leeds</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+  <script src="{% static "js/jquery-3.3.1.min.js" %}"></script>
+  <script src="{% static "js\bootstrap.min.js" %}"></script>
+  <!-- <script type="text/javascript" src="{% static "js\mobile_masts_table.js" %}"></script> -->
+</head>
+
+
+  <div class="container">
+    <h2 class="jumbotron">Mobile phone masts - 02/09/2016</h2>
+    <nav class="navbar navbar-light bg-faded">
+      <div class="" id="">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link " href="{% url 'table' %}">Main Table<span class="sr-only">(current)</span></a></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'table_five' %}">Condenced table</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'date_list' %}">Date specific table</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'total_rent' %}">Total rent</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'create' %}">Add Another Mast</a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+  </div>
