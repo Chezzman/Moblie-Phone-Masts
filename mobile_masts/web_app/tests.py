@@ -1,3 +1,6 @@
 from django.test import TestCase
+from .models import Property
 
-# Create your tests here.
+class PropertyPostRequest(TestCase):
+    def fakeData(self):
+        Property.objects.create()
