@@ -20,20 +20,19 @@ In this I have used Django, Html and bootstrap. Due to my previous experiences i
 
 ## Requirements and my thoughts:
 * Read in data with current rent in ascending order : Done
-* Display top 5 results, value can be toggled between ascending/descending value
+* Display top 5 results, value can be toggled between ascending/descending value :
   Displayed the top 5 results, Javascript function to toggle works on other tables not this one....
-* new entry and update front End
+* new entry and update front end :
   Can create a new entry, yet limited knowledge on pandas to convert this to CSV within the function, thus returning the new entry to other tables.
-* Display a total rent of all items
+* Display a total rent of all items :
   Would love to concatenate the table to just display the total rent.
-* create a dictionary
+* create a dictionary :
   created a pivot table to identify the tenant names, however struggled to splice the entries with multiple names in.
 
-Self analysis
+### Self analysis
 
-File structure : Average
-Naming convention : Abysmal
-Use of Time Available : above average
-Code Proficiency : bellow average
-Experience Gained : High
-Spirit : Glowing
+* File structure : Average
+* Naming convention : Abysmal
+* Use of Time Available : above average
+* Code Proficiency : bellow average
+* Experience Gained : High

@@ -1,26 +1,14 @@
-
-
-changing to pandas for more table control... this also means I will be programming more in python
-
-I have set up the static fiels for bootstrap and future javascript and css files
-
 need to:
-send csv data to page and not just be the page,
-then manipulate data for test paramiters
+Test functions for form and producing the table data
 
 
 Add a form to add to data base that converts to csv with pandas(new entries must meet the lease amount requirements)
 put form on index html at bottom of the table
 
-
-
 add css to what I like
 use es6 for user experience
 
-Test functions for form and producing the table data
-
-
-working theiory for dictionary
+working theory for dictionary
 
   df = pd.read_csv("D:\MAIN\CODE\Mobile_Phone_Masts_Data\Moblie-Phone-Masts\mobile_masts\mobile_phone_masts.csv", dtype='category')
   df = pd.Series(pd.Categorical(["Arqiva Services ltd", "Tenant Name"], categories=["Arqiva Services ltd", "Arqiva Ltd", "Vodafone Ltd", "O2 (UK) Ltd", "Hutchinson3G Uk Ltd", "Everything Everywhere Ltd", "Cornerstone Telecommunications Infrastructure"]))
