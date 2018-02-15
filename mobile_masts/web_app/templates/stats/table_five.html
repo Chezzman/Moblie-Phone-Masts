@@ -1,4 +1,7 @@
 {% include "stats/partials/header.html"%}
+{% load static %}
+<script type="text/javascript" src="{% static "js\main.js" %}"></script>
+
   <!-- BUTTON TO TOGGLE ASCENDING/DESCENDING VALUE -->
 <div class="container">
   {{ top_five|safe }}

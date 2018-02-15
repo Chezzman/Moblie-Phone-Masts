@@ -13,9 +13,7 @@ def table(request):
     html = df.sort_values(by='Current Rent', ascending=True).to_html(classes=['table'])
     return render(request, template, {'html' : html})
 
-#needs to be intergrated with the forms page, model, and csv(hopefully just model and csv)
-
-
+#needs to be intergrated with the csv
 def create(request):
     template = 'stats/create.html'
     if request.method == 'POST':
@@ -29,22 +27,6 @@ def create(request):
          form = Property_Form
     return render(request, template, {'form':form})
 
-
-    #
-    # form = property_form(request.POST)
-    # if form.is_valid():
-    #     post = form.save(commit=False)
-    #     post.save()
-    #     text - form.cleaned_data['post']
-    #     form = property_form()
-    #     return redirect('stats:index')
-    # create_property = {'form':form, 'text':text}
-    # return render(request, template, create_property)
-
-    # data = pd.to_csv(path_or_buf="data_csv")
-    # if correct data get pushed here change to csv and push to datase
-    #return render(request, 'stats/create.html')
-
 #needs a toggle
 def table_five(request):
     top_five = pd.read_csv(data_csv).replace(np.nan, '', regex=True).head(5).to_html(classes=['table'])
@@ -53,9 +35,10 @@ def table_five(request):
 
 def date_list(request):
     df = pd.read_csv(data_csv).replace(np.nan, '', regex=True)
-    df = pd.Series(df['Lease Start Date'])
-    df = pd.period_range(start='1999-06-01', end='2007-08-31', freq='M')
-    # date_table = df.to_html(classes=['table'])
+    df = df.loc['1999-06-01' : '2007-08-31']
+    #df = pd.Series(df['Lease Start Date'])
+    #df = pd.period_range(start='1999-06-01', end='2007-08-31', freq='M')
+    df = df.to_html(classes=['table'])
 
     template = 'stats/date_list.html'
     return render(request, template, {'df' : df})
@@ -72,6 +55,7 @@ def total_rent(request):
 def dictionary(request):
     df = pd.read_csv(data_csv)
     df = pd.pivot_table(df,index=["Tenant Name"])
+    #df = df.loc['Everything Everywhere', ' Hutchinson', 'O2', 'Vodafone', 'Cornerstone', 'Arqiva']
     table = df.replace(np.nan, '', regex=True).to_html(classes=['table'])
     template = 'stats/dictionary.html'
     return render(request, template, {'table' : table})
