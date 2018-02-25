@@ -29,10 +29,21 @@ def create(request):
     return render(request, template, {'form':form})
 
 #needs a toggle
-def table_five(request):
-    top_five = pd.read_csv(data_csv).replace(np.nan, '', regex=True).head(5).to_html(classes=['table'], index=False)
+#Do two functions within this to make the table ascend or decend in value
+
+class table_five():
+    table = pd.read_csv(data_csv)
     template = 'stats/table_five.html'
-    return render(request, template, {'top_five': top_five})
+
+    def table(request):
+        top_five = table.replace(np.nan, '', regex=True).head(5).to_html(classes=['table'], index=False)
+        return render(request, template, {'top_five': top_five})
+    def ascending_table(request):
+        ascending = table.replace(np.nan, '', regex=True).head(5).sort_values(by='Current Rent', ascending=True).to_html(classes=['table'], index=False)
+        return render(request, template, {'ascending': ascending})
+    def descending_table(request):
+        descending = table.replace(np.nan, '', regex=True).head(5).sort_values(by='Current Rent', ascending=False).to_html(classes=['table'], index=False)
+        return render(request, template, {'descending': descending})
 
 def date_list(request):
     df = pd.read_csv(data_csv).replace(np.nan, '', regex=True)

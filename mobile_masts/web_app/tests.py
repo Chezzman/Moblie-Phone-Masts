@@ -1,6 +1,7 @@
-from django.test import TestCase
-from .models import Property
+from django.test import Client
+c = Client()
+response = c.post('/login/', {'username': 'john', 'password': 'smith'})
+response.status_code
 
-class PropertyPostRequest(TestCase):
-    def fakeData(self):
-        Property.objects.create()
+response = c.get('/customer/details/')
+response.content

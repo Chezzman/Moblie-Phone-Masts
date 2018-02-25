@@ -1,0 +1,15 @@
+.nav-item{
+  margin-top: 10px;
+  padding:7px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0px 4px 4px -3px rgba(136,136,136,1);
+}
+.nav-item:hover{
+  color:rgb(2, 173, 246);
+  text-shadow:1px 1px 2px rgb(5, 255, 206);
+}
+.nav-item:active{
+    -webkit-transform: translate(0, 5px);
+    box-shadow: inset 0px 4px 12px 5px rgba(136,136,136,1);
+}
